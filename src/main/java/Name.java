@@ -44,11 +44,14 @@ public class Name {
 
     public ArrayList<String> returnTwoRandomNames() {
         Collections.shuffle(this.names);
-        ArrayList<String> results = null;
-        results.add(names.get(0));
-        results.add(names.get(1));
+
+        ArrayList<String> results = new ArrayList<>();
+        results.add(this.names.get(0));
+        results.add(this.names.get(1));
+
         this.names.remove(0);
-        this.names.remove(0);
+        this.names.remove(1);
+
         return results;
     }
 
